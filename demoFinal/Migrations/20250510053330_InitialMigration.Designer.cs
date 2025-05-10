@@ -12,8 +12,8 @@ using demoFinal.Data;
 namespace demoFinal.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20250510041920_MigracionInitial")]
-    partial class MigracionInitial
+    [Migration("20250510053330_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,6 +74,10 @@ namespace demoFinal.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("RutaImagen")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("Sexo")
                         .HasColumnType("integer");
 
@@ -118,7 +122,7 @@ namespace demoFinal.Migrations
             modelBuilder.Entity("demoFinal.entity.Producto", b =>
                 {
                     b.HasOne("demoFinal.entity.Categoria", "Categoria")
-                        .WithMany("Tipos")
+                        .WithMany("Producto")
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -128,7 +132,7 @@ namespace demoFinal.Migrations
 
             modelBuilder.Entity("demoFinal.entity.Categoria", b =>
                 {
-                    b.Navigation("Tipos");
+                    b.Navigation("Producto");
                 });
 #pragma warning restore 612, 618
         }

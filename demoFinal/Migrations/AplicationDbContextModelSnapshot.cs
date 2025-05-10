@@ -71,6 +71,10 @@ namespace demoFinal.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("RutaImagen")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("Sexo")
                         .HasColumnType("integer");
 
@@ -115,7 +119,7 @@ namespace demoFinal.Migrations
             modelBuilder.Entity("demoFinal.entity.Producto", b =>
                 {
                     b.HasOne("demoFinal.entity.Categoria", "Categoria")
-                        .WithMany("Tipos")
+                        .WithMany("Producto")
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -125,7 +129,7 @@ namespace demoFinal.Migrations
 
             modelBuilder.Entity("demoFinal.entity.Categoria", b =>
                 {
-                    b.Navigation("Tipos");
+                    b.Navigation("Producto");
                 });
 #pragma warning restore 612, 618
         }

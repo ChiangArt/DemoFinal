@@ -10,6 +10,6 @@ namespace demoFinal.entity
         public string Nombre { get; set; }
         public DateTime FechaCreacion { get; set; }
 
-        public ICollection<Producto> Tipos { get; set; }
+        public ICollection<Producto> Producto { get; set; }
     }
 }
