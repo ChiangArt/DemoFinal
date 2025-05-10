@@ -34,3 +34,4 @@ C:\Users\CHIANG\source\repos\demoFinal\demoFinal\obj\Debug\net8.0\refint\demoFin
 C:\Users\CHIANG\source\repos\demoFinal\demoFinal\obj\Debug\net8.0\demoFinal.pdb
 C:\Users\CHIANG\source\repos\demoFinal\demoFinal\obj\Debug\net8.0\demoFinal.genruntimeconfig.cache
 C:\Users\CHIANG\source\repos\demoFinal\demoFinal\obj\Debug\net8.0\ref\demoFinal.dll
+C:\Users\CHIANG\source\repos\demoFinal\demoFinal\obj\Debug\net8.0\demoFinal.sourcelink.json
